@@ -1,0 +1,32 @@
+Задание 11.
+
+SELECT AVG(speed) AS average_speed
+FROM PC
+
+
+Задание 12.
+
+SELECT AVG(speed) AS average_speed
+FROM Laptop
+WHERE price > 1000
+
+Задание 13.
+
+SELECT AVG(p.speed) AS average_speed
+FROM PC p
+JOIN Product pr ON p.model = pr.model
+WHERE pr.maker = 'A' AND pr.type = 'PC';
+
+Задание 14.
+
+SELECT c.class, s.name, c.country
+FROM Ships s
+JOIN Classes c ON s.class = c.class
+WHERE c.numGuns >= 10;
+
+Задание 15.
+
+SELECT hd
+FROM PC
+GROUP BY hd
+HAVING COUNT(*) >= 2;
